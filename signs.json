@@ -44,5 +44,28 @@
     "x": 20.800316202723522,
     "y": 77.59000244140624,
     "floor": "G-Area H.jpg"
+  },
+  {
+    "id": 1748830223580.9727,
+    "title": "L2 - Area H - Lift H",
+    "description": "Level 2 Lift Sign",
+    "tags": [
+      "Lift",
+      "Level 2",
+      "CSSD",
+      "Intensive Care Unit (ICU)",
+      "Paediatric Day Room",
+      "Entrance H",
+      "Theatres Ground Floor",
+      "NO CAR PARK ACCESS"
+    ],
+    "Filename": "L2 - Area H - Lift H.jpg",
+    "block": "Area A",
+    "image": "signs/Area%20H/L2%20-%20Area%20H%20-%20Lift%20H.jpg",
+    "placed": true,
+    "level": "G",
+    "x": 25.75277244146722,
+    "y": 81.89955957055311,
+    "floor": "G-Area A.jpg"
   }
 ]
