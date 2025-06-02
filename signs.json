@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1748830196242.825,
+    "title": "Area H - Lift H Internal",
+    "description": "Internal Lift H Sign",
+    "tags": [
+      "Lift",
+      "Day of Surgery Admissions",
+      "Theatres - Second Floor",
+      "CSSD",
+      "Intensive Care Unit (ICU)",
+      "Paediatric Day Room",
+      "Entrance H",
+      "Theatres Ground Floor"
+    ],
+    "Filename": "Area H - Lift H Internal.jpg",
+    "block": "Area H",
+    "image": "signs/Area%20H/Area%20H%20-%20Lift%20H%20Internal.jpg",
+    "placed": true,
+    "level": "G",
+    "x": 20.899365327498398,
+    "y": 78.54000244140626,
+    "floor": "G-Area H.jpg"
+  },
+  {
+    "id": 1748830205509.6228,
+    "title": "Area H - Lift H Internal 2",
+    "description": "Internal Lift H Sign",
+    "tags": [
+      "Lift",
+      "Day of Surgery Admissions",
+      "Theatres - Second Floor",
+      "CSSD",
+      "Intensive Care Unit (ICU)",
+      "Paediatric Day Room",
+      "Entrance H",
+      "Theatres Ground Floor"
+    ],
+    "Filename": "Area H - Lift H Internal 2.jpg",
+    "block": "Area H",
+    "image": "signs/Area%20H/Area%20H%20-%20Lift%20H%20Internal%202.jpg",
+    "placed": true,
+    "level": "G",
+    "x": 20.800316202723522,
+    "y": 77.59000244140624,
+    "floor": "G-Area H.jpg"
+  }
+]

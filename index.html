@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Signage Map</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="controls">
+    <!-- Map Selection Controls -->
+    <div id="map-controls">
+      <label for="floorLevelSelect">Select Level:</label>
+      <select id="floorLevelSelect" onchange="handleDropdownChange()">
+        <option value="G">Ground</option>
+        <option value="L1">Level 1</option>
+        <option value="L2">Level 2</option>
+        <option value="L3">Level 3</option>
+        <option value="L4">Level 4</option>
+      </select>
+
+      <label for="floorBlockSelect">Select Area:</label>
+      <select id="floorBlockSelect" onchange="handleDropdownChange()">
+        <option value="Area A">Area A</option>
+        <option value="Area C">Area C</option>
+        <option value="Area D">Area D</option>
+        <option value="Area E">Area E</option>
+        <option value="Area F">Area F</option>
+        <option value="Area H">Area H</option>
+      </select>
+    </div>
+
+    <!-- Marker Placement Controls -->
+    <form id="placementForm">
+      <input id="titleInput" type="text" placeholder="Title" required />
+      <input id="descInput" type="text" placeholder="Description" required />
+      <input id="tagInput" type="text" list="tagSuggestions" placeholder="Tags (comma-separated)" />
+      <datalist id="tagSuggestions"></datalist>
+
+      <input id="imageInput" type="file" accept="image/*" />
+      <button type="button" id="placeSignBtn">Place Marker</button>
+    </form>
+
+    <!-- Search Controls -->
+    <form id="searchForm">
+      <input id="tagSearch" type="text" placeholder="Search tags..." />
+      <button type="button" id="searchButton">Search</button>
+      <button type="button" id="clearButton">Clear</button>
+    </form>
+  </div>
+
+  <div id="map-container">
+    <img id="floorplan" src="G-Area A.jpg" alt="Floor Plan" />
+  </div>
+
+  <div id="popup" class="hidden">
+    <div id="popup-inner">
+      <span id="popup-close">×</span>
+      <h3 id="popup-title"></h3>
+      <img id="popup-img" />
+      <p id="popup-desc"></p>
+      <p id="popup-tags"></p>
+      <p id="popup-meta"></p>
+      <button id="editBtn">Edit</button>
+      <button id="deleteBtn">Delete</button>
+    </div>
+  </div>
+
+  <div id="editModal" class="hidden">
+    <div id="editModalContent">
+      <h3>Edit Sign</h3>
+      <input id="editTitle" type="text" placeholder="Title" />
+      <input id="editDesc" type="text" placeholder="Description" />
+      <input id="editTags" type="text" placeholder="Tags (comma-separated)" />
+      <input id="editImage" type="file" accept="image/*" />
+      <button id="saveEditBtn">Save</button>
+      <button id="cancelEditBtn">Cancel</button>
+    </div>
+  </div>
+
+  <!-- Search Results -->
+  <div id="searchResults"></div>
+
+  <!-- 🔽 New Section: Unplaced Signs -->
+  <div id="unplacedSection" style="margin: 20px;">
+<h3>Unplaced Signs</h3>
+<ul id="unplacedList" style="padding: 0 10px; list-style: disc;"></ul>
+
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+  <script src="logic.js"></script>
+  <script>
+    // Automatically load unplaced signs from CSV when the page loads
+    loadCSVMetadata();
+  </script>
+</body>
+</html>
