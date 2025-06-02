@@ -90,9 +90,15 @@
 <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 
   <script src="logic.js"></script>
-  <script>
-    // Automatically load unplaced signs from CSV when the page loads
-    loadCSVMetadata();
-  </script>
+<script>
+  window.addEventListener("load", () => {
+    if (typeof loadCSVMetadata === "function") {
+      loadCSVMetadata();
+    } else {
+      console.error("loadCSVMetadata not defined. Check if logic.js loaded correctly.");
+    }
+  });
+</script>
+
 </body>
 </html>
